@@ -28,8 +28,8 @@
       return true
     }
   ```
-      * BeforeDecoratorName: Là tên của decorator được khai báo ở trên.
-      * handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước khi vào handle.
+    - BeforeDecoratorName: Là tên của decorator được khai báo ở trên.
+    - handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước khi vào handle.
 - Nhiều function trong @Before():
   ```typescript
     @Before(BeforeDecoratorNameV1, BeforeDecoratorNameV2)
@@ -62,7 +62,7 @@
     - AroundType: kiểu dữ liệu bắt buộc cho các tham số của AroundDecoratorName.
     - khamService: Là class khamService, là cách gọi 1 service trong decorator.
     - connection: Gọi connection DataSource để chạy các câu truy vấn bằng raw query.
-    - const response = await proceed(...args): Function chính được gọi và trả kết quả về cho response.
+    - <span style="color:red">const response = await proceed(...args): Function chính được gọi và trả kết quả về cho response.</span> 
   - Cách gọi trong @Around():
   ```typescript
     @Around(AroundDecoratorName)
@@ -70,8 +70,8 @@
       return true
     }
   ```
-      * AroundDecoratorName: Là tên của decorator được khai báo ở trên.
-      * handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước và sau khi vào handle.
+    - AroundDecoratorName: Là tên của decorator được khai báo ở trên.
+    - handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước và sau khi vào handle.
 - Nhiều function trong @Around():
   ```typescript
     @Around(AroundDecoratorNameV1)
