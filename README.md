@@ -3,7 +3,7 @@
 - Đối số của @Before() là các function 
 - Cách sử dụng:
   - Ví dụ:
-  typescript
+  ```typescript
     import { BeforeType } from "@libs/decorators/before";
     import getService from "@libs/hellpers/get-service"
     import { KhamService } from "modules/kham/kham.service"
@@ -15,25 +15,25 @@
     };
 
     export default BeforeDecoratorName
-  
+  ```
     - BeforeDecoratorName: Tên của decorator.
     - args: là các tham số được truyền vào function chính được thực thi. Là 1 mảng.
     - BeforeType: kiểu dữ liệu bắt buộc cho các tham số của BeforeDecoratorName.
     - khamService: Là class khamService, là cách gọi 1 service trong decorator.
     - connection: Gọi connection DataSource để chạy các câu truy vấn bằng raw query.
   - Cách gọi trong @Before():
-  typescript
+  ```typescript
     @Before(BeforeDecoratorName)
     async handle(@Param() param: any, @Query() query, @Body() body) {
       return true
     }
-  
+  ```
     - BeforeDecoratorName: Là tên của decorator được khai báo ở trên.
     - handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước khi vào handle.
 - Nhiều function trong @Before():
-  typescript
+  ```typescript
     @Before(BeforeDecoratorNameV1, BeforeDecoratorNameV2)
     async handle(@Param() param: any, @Query() query, @Body() body) {
       return true
     }
-  
+  ```
