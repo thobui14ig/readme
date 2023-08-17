@@ -28,8 +28,8 @@
       return true
     }
   ```
-    - BeforeDecoratorName: Là tên của decorator được khai báo ở trên.
-    - handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước khi vào handle.
+    1. BeforeDecoratorName: Là tên của decorator được khai báo ở trên.
+    2. handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước khi vào handle.
 - Nhiều function trong @Before():
   ```typescript
     @Before(BeforeDecoratorNameV1, BeforeDecoratorNameV2)
@@ -70,8 +70,8 @@
       return true
     }
   ```
-    - AroundDecoratorName: Là tên của decorator được khai báo ở trên.
-    - handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước và sau khi vào handle.
+    1. AroundDecoratorName: Là tên của decorator được khai báo ở trên.
+    2. handle: Là function chạy chính, các hành động trong BeforeDecoratorName sẽ được gọi trước và sau khi vào handle.
 - Nhiều function trong @Around():
   ```typescript
     @Around(AroundDecoratorNameV1)
